@@ -3,6 +3,7 @@ const { title } = require('process')
 
 test("Verify Application Title",async function({page}){
    await page.goto("https://www.google.com/")
+    test.use({viewport:{width:1500,height:1000}}) //maximize screen
      const url=await page.url()  //print url
      console.log("URL is"+url)   //print title
 
